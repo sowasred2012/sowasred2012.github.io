@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Welcome / Hello World!"
+date:   2018-09-23 11:22:45 +0100
+categories: journal
+---
+This blog is where I'll write about all things software development, and I may also throw in a few posts about baking if the mood strikes me. Welcome!
