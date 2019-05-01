@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My name is Scott Mason Nash, I'm a front-end developer, and this is my blog.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I'll be posting about whatever I'm in the mood to write about, but I expect the majority of posts will concern one of the following:
 
+- front-end development
+- films
+- video games
+- baking
 
-[jekyll-organization]: https://github.com/jekyll
+Feel free to get in touch if anything you read here motivates you to!
