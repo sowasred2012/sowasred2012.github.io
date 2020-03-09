@@ -1,0 +1,17 @@
+@import 'settings';
+@import 'mixins';
+
+.footer {
+  border-top: 2px solid $color-dark;
+  margin-top: 10px;
+  padding-top: 24px;
+
+  &__list {
+    @include content-container;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
