@@ -15,15 +15,15 @@
 # in the templates via {{ site.myvariable }}.
 title: Scott Mason Nash
 email: sowasred2012@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://sowasred2012.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: sowasred2012
+instagram_username: sowasred2012
 
 # Build settings
 markdown: kramdown
 theme: minima
+
 plugins:
   - jekyll-feed
 # Exclude from processing.
@@ -37,3 +37,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
