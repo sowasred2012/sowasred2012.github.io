@@ -1,10 +1,10 @@
 ---
 ---
 
-@import "minima";
-@import "aside";
-@import "lists";
-
 * {
   box-sizing: border-box;
+}
+
+.p-navigation__banner {
+  padding-left: 1.5rem !important;
 }

@@ -1,0 +1,39 @@
+---
+layout: vanilla
+---
+<article class="p-strip is-bordered" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="u-fixed-width">
+    <header>
+      <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+      <p>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.modified_date -%}
+          ~ 
+          {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+          <time datetime="{{ mdate }}" itemprop="dateModified">
+            {{ mdate | date: date_format }}
+          </time>
+        {%- endif -%}
+        {%- if page.author -%}
+          • {% for author in page.author %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ author }}</span></span>
+              {%- if forloop.last == false %}, {% endif -%}
+          {% endfor %}
+        {%- endif -%}</p>
+    </header>
+
+    <div itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a href="{{ page.url | relative_url }}" hidden></a>
+  </div>
+</article>

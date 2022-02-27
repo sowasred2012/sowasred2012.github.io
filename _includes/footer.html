@@ -1,13 +1,9 @@
-<footer class="site-footer h-card">
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <ul class="social-media-list inline-list">
-          <li><a class="u-email" href="mailto:{{ site.email }}">Email</a></li>
-          {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><span class="username">GitHub</span></a></li>{%- endif -%}
-          {%- if site.instagram_username -%}<li><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><span class="username">Instagram</span></a></li>{%- endif -%}
-        </ul>
-      </div>
-    </div>
+<footer class="p-strip is-shallow">
+  <div class="u-fixed-width">
+    <ul class="p-inline-list">
+      <li class="p-inline-list__item"><a href="mailto:{{ site.email }}"><i class="p-icon--email">Email</i></a></li>
+      {%- if site.github_username -%}<li class="p-inline-list__item"><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><i class="p-icon--github">GitHub</i></span></a></li>{%- endif -%}
+      {%- if site.instagram_username -%}<li class="p-inline-list__item"><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><i class="p-icon--instagram">Instagram</i></a></li>{%- endif -%}
+    </ul>
   </div>
 </footer>

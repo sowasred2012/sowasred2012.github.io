@@ -1,0 +1,22 @@
+<header id="navigation" class="p-navigation is-dark">
+  <div>
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+    
+  </div>
+
+  <div class="p-navigation__row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__logo u-vertically-center">
+        <a class="p-navigation__item p-link--inverted" href="{{ "/" | relative_url }}">
+          {% if page.url != "/" %}
+            <span class="p-heading--3 u-no-margin">{{ site.title | escape }}</span>
+          {% else %}
+            <h1 class="p-heading--3 u-no-margin">{{ site.title | escape }}</h1>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

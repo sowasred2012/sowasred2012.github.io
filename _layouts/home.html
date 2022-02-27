@@ -1,0 +1,36 @@
+---
+layout: vanilla
+---
+
+<section class="p-strip is-shallow is-bordered">
+  <div class="row">
+    <div class="col-12">
+      {{ content }}
+
+      {% assign posts = site.posts %}
+
+      {%- if posts.size > 0 -%}
+        <ul class="p-list">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {%- for post in posts -%}
+          <li class="p-list__item">
+            <span>{{ post.date | date: date_format }}</span>
+            <h2>
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h2>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+
+            {% if forloop.last == false %}
+              <hr>
+            {% endif %}
+          </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
