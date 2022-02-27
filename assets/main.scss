@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
-.p-navigation__banner {
-  padding-left: 1.5rem !important;
+.p-navigation {
+  // dirty Vanilla overrides, shhhh
+  &__banner {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+
+    @media (min-width: 620px) {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+  }
 }
