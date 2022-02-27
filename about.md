@@ -4,4 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Scott! I'll fill this out later.
+<section class="p-strip u-no-padding--top is-bordered">
+  <div class="u-fixed-width">
+    <p>Hi, I'm Scott! I'll fill this out later.</p>
+  </div>
+</section>
