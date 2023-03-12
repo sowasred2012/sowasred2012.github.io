@@ -1,0 +1,85 @@
+.quiz {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.keyboard {
+  display: grid;
+  margin-top: 2rem;
+  grid-gap: 5px;
+  grid-template-columns: repeat(20, 4vw);
+  grid-template-rows: repeat(5, 12vh);
+  place-content: center;
+}
+
+.keyboard input {
+  border-radius: 5px;
+  grid-column: span 2;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.keyboard input:not(:disabled) {
+  background-color: rgb(243, 243, 243);
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  grid-column: span 2;
+  font-size: 20px;
+  text-align: center;
+}
+
+.keyboard input.correct {
+  background-color: rgb(6, 255, 6);
+  color: #000;
+}
+
+.keyboard input:not(:disabled):hover {
+  background-color: rgb(94, 94, 94);
+  color: #fff;
+}
+
+#question {
+  font-size: 3rem;
+}
+
+#answer {
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+.keyboard input.second-row {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.keyboard input.third-row {
+  grid-column-start: 3;
+  grid-column-end: 5; 
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-inner {
+  bottom: 0;
+  height: 80vh;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60vw;
+}
