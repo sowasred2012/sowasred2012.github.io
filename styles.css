@@ -1,23 +1,19 @@
 .quiz {
   font-family: Arial, sans-serif;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .keyboard {
-  display: grid;
   margin-top: 2rem;
-  grid-gap: 5px;
-  grid-template-columns: repeat(20, 4vw);
-  grid-template-rows: repeat(5, 12vh);
-  place-content: center;
 }
 
 .keyboard input {
   border-radius: 5px;
-  grid-column: span 2;
   font-size: 20px;
+  height: 4rem;
+  margin: 0.3rem 0.2rem;
   text-transform: uppercase;
+  width: 4rem;
 }
 
 .keyboard input:not(:disabled) {
@@ -25,7 +21,6 @@
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
-  grid-column: span 2;
   font-size: 20px;
   text-align: center;
 }
@@ -40,23 +35,23 @@
   color: #fff;
 }
 
+.keyboard input:disabled:not(.correct) {
+    opacity: 0;
+}
+
 #question {
   font-size: 3rem;
 }
 
 #answer {
-  letter-spacing: 1rem;
-  font-size: 2rem;
-}
-
-.keyboard input.second-row {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.keyboard input.third-row {
-  grid-column-start: 3;
-  grid-column-end: 5; 
+    background-color: #fbff91;
+    border: 2px solid;
+    border-radius: 5px;
+    display: inline-block;
+    letter-spacing: 1rem;
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+    text-transform: uppercase;
 }
 
 .modal {
@@ -75,11 +70,11 @@
 
 .modal-inner {
   bottom: 0;
-  height: 80vh;
+  height: 80%;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  width: 60vw;
+  width: 80%;
 }
