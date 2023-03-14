@@ -4,6 +4,7 @@ const initQuiz = () => {
   const prizeEl = document.getElementById("prize");
   const letterKeys = document.querySelectorAll('input[type="button"]');
   const modal = document.querySelector(".modal");
+  const prize = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3vJBYp02CRpQ5cP4Q3htVf?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
   let questionObject;
   let question;
   let answer;
@@ -32,13 +33,9 @@ const initQuiz = () => {
   };
 
   const setQuestion = () => {
-    questionObject = {
-      question: "What is your name?",
-      answer: "oliver",
-      prize: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3vJBYp02CRpQ5cP4Q3htVf?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
-    };
+    questionObject = getQuestion();
     question = questionObject.question;
-    answer = questionObject.answer.split("");
+    answer = questionObject.answer.toLowerCase().split("");
     attempt = Array(answer.length).fill(null);
 
     questionEl.innerHTML = `${question}`;
@@ -69,7 +66,7 @@ const initQuiz = () => {
 
   const checkForWin = () => {
     if (attempt.join("") == answer.join("")) {
-      prizeEl.innerHTML = questionObject.prize;
+      prizeEl.innerHTML = prize;
       modal.classList.add("active");
     }
   };
@@ -81,6 +78,29 @@ const initQuiz = () => {
       key.disabled = false;
     });
   };
+
+  const getQuestion = () => {
+    questions = [
+        {
+            question: "What is your name?",
+            answer: "Oliver"
+        },
+        {
+            question: "What kind of animal is Ben?",
+            answer: "dog"
+        },
+        {
+            question: "Where do you live?",
+            answer: "Radyr"
+        },
+        {
+            question: "What kind of animal is Manny?",
+            answer: "mammoth"
+        }
+    ]
+
+    return questions[Math.floor(Math.random() * questions.length)];
+  }
 
   attachEventListeners();
   setQuestion();
