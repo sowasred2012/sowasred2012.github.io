@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen reader playground</title>
+    <style>
+        p,
+        li {
+            max-width: 80ch;
+        }
+
+        body {
+            font-family: "Arial";
+            line-height: 2rem;
+        }
+
+        .legend {
+            background: #fff;
+            bottom: 0;
+            border-right: 1px solid #333;
+            left: 0;
+            position: fixed;
+            overflow-y: scroll;
+            top: 0;
+            width: 20vw;
+        }
+
+        .legend ul {
+            padding-left: 1.75rem;
+        }
+
+        kbd {
+            background: #f1f1f1;
+            border: 1px solid #666;
+            border-radius: 4px;
+            font-family: inherit;
+            font-weight: bold;
+            margin: 0 0.25rem;
+            padding: 0.25rem;
+        }
+
+        main {
+            padding-left: 22vw;
+        }
+    </style>
+</head>
+    <body>
+        <aside class="legend" aria-hidden="true">
+            <ul>
+                <li><kbd>Ctrl</kbd>: Stop reading</li>
+                <li><kbd>↑</kbd>/<kbd>↓</kbd>: Previous/Next paragraph or item</li>
+                <li><kbd>←</kbd>/<kbd>→</kbd>: Previous/Next character</li>
+                <li><kbd>Ctrl</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd>: Previous/next line</li>
+                <li><kbd>Ctrl</kbd> + <kbd>←</kbd>/<kbd>→</kbd>: Previous/next word</li>
+                <li><kbd>Narrator</kbd> + <kbd>Tab</kbd>: Reread current item</li>
+                <li><kbd>Narrator</kbd> + <kbd>+</kbd>/<kbd>-</kbd>: Increase/decrease speech rate</li>
+            </ul>
+
+            <ul>
+                <li><kbd>Tab</kbd>: Links and form controls</li>
+                <li><kbd>H</kbd>: Headings</li>
+                <li><kbd>1</kbd> - <kbd>6</kbd>: Heading 1, heading 2, etc.</li>
+                <li><kbd>D</kbd>: Landmarks</li>
+                <li><kbd>F</kbd>: Form controls</li>
+                <li><kbd>T</kbd>: Tables</li>
+                <li><kbd>B</kbd>: Buttons</li>
+                <li><kbd>K</kbd>: Links</li>
+                <li><kbd>L</kbd>: Lists</li>
+                <li><kbd>I</kbd>: Items in a list</li>
+            </ul>
+
+            <ul>
+                <li><kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd>: Navigate through form controls</li>
+                <li><kbd>Space</kbd> to select and deselect checkboxes</li>
+                <li><kbd>↑</kbd>/<kbd>↓</kbd>: Select from a group of radio buttons
+                <li><kbd>Space</kbd>, then <kbd>↑</kbd>/<kbd>↓</kbd> or the first letter of an option: Expand and then select an option in a combo box</li>
+                <li><kbd>Enter</kbd>: Submit a form</li>
+            </ul>
+        </aside>
+
+        <main>
+            <form>
+                <input placeholder="Search Wikipedia" aria-label="Search Wikipedia (does not work)" name="search" role="combobox" autocomplete="off" aria-autocomplete="list" aria-expanded="false" type="search">
+                <button>Search</button>
+            </form>
+            <h1>List of most-viewed YouTube videos</h1>
+            <p><a href="https://en.wikipedia.org/wiki/YouTube" title="YouTube">YouTube</a> is an American video-sharing website headquartered in <a href="https://en.wikipedia.org/wiki/San_Bruno,_California" title="San Bruno, California">San Bruno, California</a>. Although the most-viewed videos were initially <a href="https://en.wikipedia.org/wiki/Viral_video" title="Viral video">viral videos</a>, such as "<a href="https://en.wikipedia.org/wiki/Judson_Laipply#&quot;Evolution_of_Dance&quot;" title="Judson Laipply">Evolution of Dance</a>" and "<a href="https://en.wikipedia.org/wiki/Charlie_Bit_My_Finger" title="Charlie Bit My Finger">Charlie Bit My Finger</a>", the most-viewed videos were increasingly related to <a href="https://en.wikipedia.org/wiki/Music_videos" class="mw-redirect" title="Music videos">music videos</a>. Since <a href="https://en.wikipedia.org/wiki/Lady_Gaga" title="Lady Gaga">Lady Gaga</a>'s "<a href="https://en.wikipedia.org/wiki/Bad_Romance" title="Bad Romance">Bad Romance</a>" in 2009, every video that has reached the top of the "most-viewed YouTube videos" list has been a music video. Some of the previously most-viewed videos are no longer available on the site.
+            </p>
+
+            <h2>Top videos</h2>
+            <p>The following table lists the top 30 most-viewed videos on <a href="https://en.wikipedia.org/wiki/YouTube" title="YouTube">YouTube</a>, with each total rounded to the nearest 10 million views, uploader, and publication date. Note that some videos may not be available worldwide due to <a href="https://en.wikipedia.org/wiki/Geolocation_software#Regional_licensing" class="mw-redirect" title="Geolocation software">regional restrictions</a> in certain countries.
+            </p>
+            <table class="wikitable sortable jquery-tablesorter">
+                <caption>Top 30 most-viewed YouTube videos<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup>
+                </caption>
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending"><abbr title="Number">No.</abbr>
+                </th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Video name
+                </th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Uploader
+                </th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Views (billions)
+                </th>
+                <th data-sort-type="usLongDate" class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Publication date
+                </th>
+                <th class="unsortable">Note
+                </th></tr></thead><tbody>
+                <tr>
+                <td align="center">1.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Baby_Shark" title="Baby Shark">Baby Shark Dance</a>"<sup id="cite_ref-Baby_Shark_Dance_4-0" class="reference"><a href="#cite_note-Baby_Shark_Dance-4">[4]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Pinkfong" title="Pinkfong">Pinkfong Baby Shark - Kids' Songs &amp; Stories</a></td>
+                <td align="center">12.73</td>
+                <td align="right">June 17, 2016</td>
+                <td align="center"><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[A]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">2.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Despacito#Music_video" title="Despacito">Despacito</a>"<sup id="cite_ref-Despacito_(feat._Daddy_Yankee)_8-0" class="reference"><a href="#cite_note-Despacito_(feat._Daddy_Yankee)-8">[7]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Luis_Fonsi" title="Luis Fonsi">Luis Fonsi</a></td>
+                <td align="center">8.14</td>
+                <td align="right">January 12, 2017</td>
+                <td align="center"><sup id="cite_ref-despacitoview_15-0" class="reference"><a href="#cite_note-despacitoview-15">[B]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">3.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Johny_Johny_Yes_Papa#YouTube_videos" class="mw-redirect" title="Johny Johny Yes Papa">Johny Johny Yes Papa</a>"<sup id="cite_ref-Johny_Johny_Yes_Papa_16-0" class="reference"><a href="#cite_note-Johny_Johny_Yes_Papa-16">[14]</a></sup></td>
+                <td><a rel="nofollow" class="external text" href="https://www.youtube.com/@LooLooKids">LooLoo Kids</a></td>
+                <td align="center">6.69</td>
+                <td align="right">October 8, 2016</td>
+                <td align="center"><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[C]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">4.</td>
+                <td>"Bath Song"<sup id="cite_ref-Bath_Song_18-0" class="reference"><a href="#cite_note-Bath_Song-18">[15]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Cocomelon_%E2%80%93_Nursery_Rhymes" class="mw-redirect" title="Cocomelon – Nursery Rhymes">Cocomelon – Nursery Rhymes</a></td>
+                <td align="center">6.15</td>
+                <td align="right">May 2, 2018</td>
+                <td align="center"><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[D]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">5.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Shape_of_You#Music_video" title="Shape of You">Shape of You</a>"<sup id="cite_ref-Shape_of_You_20-0" class="reference"><a href="#cite_note-Shape_of_You-20">[16]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Ed_Sheeran" title="Ed Sheeran">Ed Sheeran</a></td>
+                <td align="center">5.97</td>
+                <td align="right">January 30, 2017</td>
+                <td align="center"><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[E]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">6.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/See_You_Again#Music_video" title="See You Again">See You Again</a>"<sup id="cite_ref-See_You_Again_23-0" class="reference"><a href="#cite_note-See_You_Again-23">[18]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Wiz_Khalifa" title="Wiz Khalifa">Wiz Khalifa</a></td>
+                <td align="center">5.86</td>
+                <td align="right">April 6, 2015</td>
+                <td align="center"><sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[F]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">7.</td>
+                <td>"Phonics Song with Two Words"<sup id="cite_ref-Phonics_Song_29-0" class="reference"><a href="#cite_note-Phonics_Song-29">[23]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/ChuChu_TV" title="ChuChu TV">ChuChu TV</a></td>
+                <td align="center">5.26</td>
+                <td align="right">March 6, 2014</td>
+                <td align="center"><sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[G]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">8.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/The_Wheels_on_the_Bus" title="The Wheels on the Bus">Wheels on the Bus</a>"<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[24]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Cocomelon_%E2%80%93_Nursery_Rhymes" class="mw-redirect" title="Cocomelon – Nursery Rhymes">Cocomelon – Nursery Rhymes</a></td>
+                <td align="center">5.14</td>
+                <td align="right">May 24, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">9.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Uptown_Funk#Music_video" title="Uptown Funk">Uptown Funk</a>"<sup id="cite_ref-Uptown_Funk_32-0" class="reference"><a href="#cite_note-Uptown_Funk-32">[25]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Mark_Ronson" title="Mark Ronson">Mark Ronson</a></td>
+                <td align="center">4.89</td>
+                <td align="right">November 19, 2014</td>
+                <td align="center"><sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[H]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">10.</td>
+                <td>"Learning Colors – Colorful Eggs on a Farm"<sup id="cite_ref-Eggs_34-0" class="reference"><a href="#cite_note-Eggs-34">[26]</a></sup></td>
+                <td><a rel="nofollow" class="external text" href="https://www.youtube.com/@user-fc2ty4qw7q">Miroshka TV</a></td>
+                <td align="center">4.87</td>
+                <td align="right">February 27, 2018</td>
+                <td align="center"><sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[I]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">11.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Gangnam_Style_(music_video)" title="Gangnam Style (music video)">Gangnam Style</a>"<sup id="cite_ref-Gangnam_Style_36-0" class="reference"><a href="#cite_note-Gangnam_Style-36">[27]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Psy" title="Psy">Psy</a></td>
+                <td align="center">4.77</td>
+                <td align="right">July 15, 2012</td>
+                <td align="center"><sup id="cite_ref-gangnamview_41-0" class="reference"><a href="#cite_note-gangnamview-41">[J]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">12.</td>
+                <td>"<i><a href="https://en.wikipedia.org/wiki/Masha_and_the_Bear" title="Masha and the Bear">Masha and the Bear</a></i> – Recipe for Disaster"<sup id="cite_ref-Masha_and_the_Bear_42-0" class="reference"><a href="#cite_note-Masha_and_the_Bear-42">[32]</a></sup></td>
+                <td>Get Movies</td>
+                <td align="center">4.55</td>
+                <td align="right">January 31, 2012</td>
+                <td align="center"><sup id="cite_ref-43" class="reference"><a href="#cite_note-43">[K]</a></sup>
+                </td></tr>
+                <tr>
+                <td align="center">13.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Dame_Tu_Cosita#Music_video" title="Dame Tu Cosita">Dame Tu Cosita</a>"<sup id="cite_ref-Dame_Tu_Cosita_44-0" class="reference"><a href="#cite_note-Dame_Tu_Cosita-44">[33]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/El_Chombo" title="El Chombo">El Chombo</a></td>
+                <td align="center">4.32</td>
+                <td align="right">April 5, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">14.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Axel_F#Crazy_Frog_version" title="Axel F">Axel F</a>"<sup id="cite_ref-45" class="reference"><a href="#cite_note-45">[34]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Crazy_Frog" title="Crazy Frog">Crazy Frog</a></td>
+                <td align="center">3.87</td>
+                <td align="right">June 16, 2009</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">15.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Sugar_(Maroon_5_song)#Music_video" title="Sugar (Maroon 5 song)">Sugar</a>"<sup id="cite_ref-Sugar_46-0" class="reference"><a href="#cite_note-Sugar-46">[35]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Maroon_5" title="Maroon 5">Maroon 5</a></td>
+                <td align="center">3.86</td>
+                <td align="right">January 14, 2015</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">16.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Roar_(song)#Music_video" title="Roar (song)">Roar</a>"<sup id="cite_ref-Roar_47-0" class="reference"><a href="#cite_note-Roar-47">[36]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Katy_Perry" title="Katy Perry">Katy Perry</a></td>
+                <td align="center">3.78</td>
+                <td align="right">September 5, 2013</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">17.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Counting_Stars#Music_video" title="Counting Stars">Counting Stars</a>"<sup id="cite_ref-Counting_Stars_48-0" class="reference"><a href="#cite_note-Counting_Stars-48">[37]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/OneRepublic" title="OneRepublic">OneRepublic</a></td>
+                <td align="center">3.77</td>
+                <td align="right">May 31, 2013</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">18.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Sorry_(Justin_Bieber_song)#Music_videos" title="Sorry (Justin Bieber song)">Sorry</a>"<sup id="cite_ref-Sorry_49-0" class="reference"><a href="#cite_note-Sorry-49">[38]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Justin_Bieber" title="Justin Bieber">Justin Bieber</a></td>
+                <td align="center">3.65</td>
+                <td align="right">October 22, 2015</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">19.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Baa,_Baa,_Black_Sheep" title="Baa, Baa, Black Sheep">Baa Baa Black Sheep</a>"<sup id="cite_ref-50" class="reference"><a href="#cite_note-50">[39]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Cocomelon_%E2%80%93_Nursery_Rhymes" class="mw-redirect" title="Cocomelon – Nursery Rhymes">Cocomelon – Nursery Rhymes</a></td>
+                <td align="center">3.61</td>
+                <td align="right">June 25, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">20.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Thinking_Out_Loud#Music_video" title="Thinking Out Loud">Thinking Out Loud</a>"<sup id="cite_ref-Thinking_Out_Loud_51-0" class="reference"><a href="#cite_note-Thinking_Out_Loud-51">[40]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Ed_Sheeran" title="Ed Sheeran">Ed Sheeran</a></td>
+                <td align="center">3.58</td>
+                <td align="right">October 7, 2014</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">21.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Waka_Waka_(This_Time_for_Africa)#Music_video" title="Waka Waka (This Time for Africa)">Waka Waka (This Time for Africa)</a>"<sup id="cite_ref-Waka_Waka_52-0" class="reference"><a href="#cite_note-Waka_Waka-52">[41]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Shakira" title="Shakira">Shakira</a></td>
+                <td align="center">3.56</td>
+                <td align="right">June 4, 2010</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">22.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Dark_Horse_(Katy_Perry_song)#Music_video" title="Dark Horse (Katy Perry song)">Dark Horse</a>"<sup id="cite_ref-Dark_Horse_53-0" class="reference"><a href="#cite_note-Dark_Horse-53">[42]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Katy_Perry" title="Katy Perry">Katy Perry</a></td>
+                <td align="center">3.50</td>
+                <td align="right">February 20, 2014</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">23.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Faded_(Alan_Walker_song)#Music_video" title="Faded (Alan Walker song)">Faded</a>"<sup id="cite_ref-Faded_54-0" class="reference"><a href="#cite_note-Faded-54">[43]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Alan_Walker_(music_producer)" class="mw-redirect" title="Alan Walker (music producer)">Alan Walker</a></td>
+                <td align="center">3.44</td>
+                <td align="right">December 3, 2015</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">24.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Perfect_(Ed_Sheeran_song)#Music_video" title="Perfect (Ed Sheeran song)">Perfect</a>"<sup id="cite_ref-Perfect_55-0" class="reference"><a href="#cite_note-Perfect-55">[44]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Ed_Sheeran" title="Ed Sheeran">Ed Sheeran</a></td>
+                <td align="center">3.42</td>
+                <td align="right">November 9, 2017</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">25.</td>
+                <td>"Lakdi Ki Kathi"<sup id="cite_ref-Lakdi_56-0" class="reference"><a href="#cite_note-Lakdi-56">[45]</a></sup></td>
+                <td><a rel="nofollow" class="external text" href="https://www.youtube.com/@JingleToons">Jingle Toons</a></td>
+                <td align="center">3.42</td>
+                <td align="right">June 14, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">26.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Let_Her_Go#Music_video" title="Let Her Go">Let Her Go</a>"<sup id="cite_ref-Let_Her_Go_57-0" class="reference"><a href="#cite_note-Let_Her_Go-57">[46]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Passenger_(singer)" title="Passenger (singer)">Passenger</a></td>
+                <td align="center">3.42</td>
+                <td align="right">July 25, 2012</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">27.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Girls_Like_You#Music_video" title="Girls Like You">Girls Like You</a>"<sup id="cite_ref-Girls_Like_You_58-0" class="reference"><a href="#cite_note-Girls_Like_You-58">[47]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Maroon_5" title="Maroon 5">Maroon 5</a></td>
+                <td align="center">3.40</td>
+                <td align="right">May 31, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">28.</td>
+                <td>"Humpty the train on a fruits ride"<sup id="cite_ref-Humpty_59-0" class="reference"><a href="#cite_note-Humpty-59">[48]</a></sup></td>
+                <td><a rel="nofollow" class="external text" href="https://www.youtube.com/@KiddiestvHindi">Kiddiestv Hindi – Nursery Rhymes &amp; Kids Songs</a></td>
+                <td align="center">3.38</td>
+                <td align="right">January 26, 2018</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">29.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Lean_On#Music_video" title="Lean On">Lean On</a>"<sup id="cite_ref-Lean_On_60-0" class="reference"><a href="#cite_note-Lean_On-60">[49]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Major_Lazer" title="Major Lazer">Major Lazer</a></td>
+                <td align="center">3.37</td>
+                <td align="right">March 22, 2015</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td align="center">30.</td>
+                <td>"<a href="https://en.wikipedia.org/wiki/Bailando_(Enrique_Iglesias_song)#Music_video" title="Bailando (Enrique Iglesias song)">Bailando</a>"<sup id="cite_ref-Bailando_61-0" class="reference"><a href="#cite_note-Bailando-61">[50]</a></sup></td>
+                <td><a href="https://en.wikipedia.org/wiki/Enrique_Iglesias" title="Enrique Iglesias">Enrique Iglesias</a></td>
+                <td align="center">3.37</td>
+                <td align="right">April 11, 2014</td>
+                <td>
+                </td></tr>
+                </tbody><tfoot><tr>
+                <th colspan="7" style="text-align:center; font-size:8pt;">As of April 23, 2023
+                </th></tr></tfoot></table>
+            <h2>Billion-View Club</h2>
+
+            <p>An early metric of a video's popularity was the so-called Billion-View Club, denoting videos which had succeeded in reaching over 1 billion views since their initial upload.<sup id="cite_ref-RollingStone_62-0" class="reference"><a href="#cite_note-RollingStone-62">[51]</a></sup>
+            </p>
+
+            <p>In December 2012, "<a href="https://en.wikipedia.org/wiki/Gangnam_Style_(music_video)" title="Gangnam Style (music video)">Gangnam Style</a>" became the first video to reach one billion views.<sup id="cite_ref-billboardbillion_38-1" class="reference"><a href="#cite_note-billboardbillion-38">[29]</a></sup> By June 2015, only "<a href="https://en.wikipedia.org/wiki/Baby_(Justin_Bieber_song)#Music_video" title="Baby (Justin Bieber song)">Baby</a>" had also managed to pass this threshold, but, by October 2015, a total of ten videos had done so,<sup id="cite_ref-RollingStone_62-1" class="reference"><a href="#cite_note-RollingStone-62">[51]</a></sup> and the number grew further to over 200 in February 2022.<sup id="cite_ref-63" class="reference"><a href="#cite_note-63">[52]</a></sup> Considering older videos that pre-dated YouTube's creation in 2005 but were added later:
+            </p>
+
+            <ul><li>"<a href="https://en.wikipedia.org/wiki/November_Rain" title="November Rain">November Rain</a>" by <a href="https://en.wikipedia.org/wiki/Guns_N%27_Roses" title="Guns N' Roses">Guns N' Roses</a> became the first video made prior to YouTube's creation to reach this threshold by July 2018.<sup id="cite_ref-64" class="reference"><a href="#cite_note-64">[53]</a></sup></li>
+                <li>"<a href="https://en.wikipedia.org/wiki/Numb_(Linkin_Park_song)" title="Numb (Linkin Park song)">Numb</a>" by <a href="https://en.wikipedia.org/wiki/Linkin_Park" title="Linkin Park">Linkin Park</a> was the first 2000s video predating YouTube to reach 1 billion views in November 2018.<sup id="cite_ref-65" class="reference"><a href="#cite_note-65">[54]</a></sup></li>
+                <li>"<a href="https://en.wikipedia.org/wiki/Bohemian_Rhapsody" title="Bohemian Rhapsody">Bohemian Rhapsody</a>" by <a href="https://en.wikipedia.org/wiki/Queen_(band)" title="Queen (band)">Queen</a> was the first 1970s video (and pre-1990s video) to reach 1 billion views in July 2019.<sup id="cite_ref-66" class="reference"><a href="#cite_note-66">[55]</a></sup></li>
+                <li>"<a href="https://en.wikipedia.org/wiki/Sweet_Child_o%27_Mine" title="Sweet Child o' Mine">Sweet Child o' Mine</a>" by Guns N' Roses was the first 1980s video to reach 1 billion views in October 2019.<sup id="cite_ref-67" class="reference"><a href="#cite_note-67">[56]</a></sup></li></ul>
+
+            <p>With numerous videos readily clearing one billion views by 2018, more interest has been on two- and three-billion-views-and-higher metrics. In May 2014, "Gangnam Style" became the first video to exceed two billion views.<sup id="cite_ref-billboardbillion2_39-1" class="reference"><a href="#cite_note-billboardbillion2-39">[30]</a></sup> "<a href="https://en.wikipedia.org/wiki/Despacito#Music_video" title="Despacito">Despacito</a>" became the first video to reach three billion views in August 2017,<sup id="cite_ref-3billion_9-1" class="reference"><a href="#cite_note-3billion-9">[8]</a></sup> four billion in October 2017,<sup id="cite_ref-4billion_10-1" class="reference"><a href="#cite_note-4billion-10">[9]</a></sup> five billion in April 2018,<sup id="cite_ref-5billion_11-1" class="reference"><a href="#cite_note-5billion-11">[10]</a></sup> six billion in February 2019,<sup id="cite_ref-6billion_12-1" class="reference"><a href="#cite_note-6billion-12">[11]</a></sup> and seven billion in October 2020.<sup id="cite_ref-7billion_13-1" class="reference"><a href="#cite_note-7billion-13">[12]</a></sup> "<a href="https://en.wikipedia.org/wiki/Baby_Shark_Dance" class="mw-redirect" title="Baby Shark Dance">Baby Shark Dance</a>" became the first video to reach eight billion views in February 2021, nine billion views in July 2021, and ten billion views in January 2022.<sup id="cite_ref-Baby_Shark_Ten_Billion_5-1" class="reference"><a href="#cite_note-Baby_Shark_Ten_Billion-5">[5]</a></sup> As of March 2023, it has more than 12.44 billion views.
+            </p>
+
+            <p>As of September&nbsp;2022<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=List_of_most-viewed_YouTube_videos&amp;action=edit">[update]</a></sup>, thirteen videos have exceeded four billion views, six of which exceed five billion views, three of which exceed six billion views, and two of which exceed seven billion views.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Dates_and_numbers#Chronological_items" title="Wikipedia:Manual of Style/Dates and numbers"><span title="The date of the event predicted near this tag has passed. (March 2023)">needs update</span></a></i>]</sup> "<a href="https://en.wikipedia.org/wiki/See_You_Again" title="See You Again">See You Again</a>" became the second video to reach three billion views in August 2017,<sup id="cite_ref-SeeYouAgain3_26-1" class="reference"><a href="#cite_note-SeeYouAgain3-26">[21]</a></sup> followed by "Gangnam Style" in November 2017.<sup id="cite_ref-Gangnam3_40-1" class="reference"><a href="#cite_note-Gangnam3-40">[31]</a></sup> "<a href="https://en.wikipedia.org/wiki/Shape_of_You#Music_video" title="Shape of You">Shape of You</a>" became the second video to reach four billion views in January 2019,<sup id="cite_ref-ShapeofYou4_21-1" class="reference"><a href="#cite_note-ShapeofYou4-21">[17]</a></sup> followed by "See You Again" in February 2019.<sup id="cite_ref-SeeYouAgain4_27-1" class="reference"><a href="#cite_note-SeeYouAgain4-27">[22]</a></sup> "<a href="https://en.wikipedia.org/wiki/Baby_Shark_Dance" class="mw-redirect" title="Baby Shark Dance">Baby Shark Dance</a>" became the second video to reach five billion views in April 2020,<sup id="cite_ref-68" class="reference"><a href="#cite_note-68">[57]</a></sup> followed by "Shape of You" in October 2020. "Baby Shark Dance" became the second video to reach six billion views in July 2020, and seven billion views in October 2020.
+            </p>
+
+            <p>The majority of these videos in the Billion-View Club have been commercial <a href="https://en.wikipedia.org/wiki/Music_video" title="Music video">music videos</a> by popular artists, but the list has included oddities, typically programs aimed at children. Such videos include two episodes of the Russian animated cartoon <i><a href="https://en.wikipedia.org/wiki/Masha_and_the_Bear" title="Masha and the Bear">Masha and the Bear</a></i>, a version of "<a href="https://en.wikipedia.org/wiki/The_Wheels_on_the_Bus" title="The Wheels on the Bus">The Wheels on the Bus</a>" by the British animation studio <a href="https://en.wikipedia.org/wiki/Little_Baby_Bum" title="Little Baby Bum">Little Baby Bum</a>, and "<a href="https://en.wikipedia.org/wiki/Johny_Johny_Yes_Papa" class="mw-redirect" title="Johny Johny Yes Papa">Johny Johny Yes Papa</a>" from children's stations LooLoo Kids and <a href="https://en.wikipedia.org/wiki/ChuChu_TV" title="ChuChu TV">ChuChu TV</a>.<sup id="cite_ref-69" class="reference"><a href="#cite_note-69">[58]</a></sup> Various versions of the song "<a href="https://en.wikipedia.org/wiki/Baby_Shark" title="Baby Shark">Baby Shark</a>" in total amassed more than five billion views by January 2019, with the original version posted by <a href="https://en.wikipedia.org/wiki/Pinkfong" title="Pinkfong">Pinkfong</a> having exceeded two billion views previously.<sup id="cite_ref-70" class="reference"><a href="#cite_note-70">[59]</a></sup> The original video by Pinkfong is now the most viewed video on the site. On October 29, 2020, Baby Shark surpassed 7 billion views, and on November 2, 2020, it passed Despacito to become the most viewed video on YouTube. On February 23, 2021, Baby Shark surpassed 8 billion views, becoming the first video to do so. On July 20, 2021, Baby Shark surpassed 9 billion views, becoming the first (and currently only) video to do so. On January 13, 2022, Baby Shark became the first (and currently only) video to surpass 10 billion views.<sup id="cite_ref-Baby_Shark_Ten_Billion_5-2" class="reference"><a href="#cite_note-Baby_Shark_Ten_Billion-5">[5]</a></sup>
+            </p>
+        </main>
+    </body>
+</html>
